@@ -1,0 +1,54 @@
+{
+    "name": "yuilingo/fcm",
+    "description": "laravel firebase cloud messaging package",
+    "keywords": [
+        "yuilingo",
+        "fcm"
+    ],
+    "homepage": "https://github.com/yuilingo/fcm",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "yuilingo",
+            "email": "leongkarhou@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "5.8.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.8.*",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Yuilingo\\Fcm\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Yuilingo\\Fcm\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Yuilingo\\Fcm\\FcmServiceProvider"
+            ],
+            "aliases": {
+                "Fcm": "Yuilingo\\Fcm\\FcmFacade"
+            }
+        }
+    }
+}
